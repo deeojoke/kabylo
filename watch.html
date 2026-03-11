@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kabylo Watch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style/watch.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="section">
+        <div class="nav">
+            <a href="index.html"><img src="kabylo1.png" alt=""></a>
+        </div>
+    </div>
+
+    <h1 id="movieTitle"></h1>
+
+    <div class="video-container">
+      <iframe
+          id="movieFrame"
+          src=""
+          frameborder="0"
+          allow="autoplay"
+          allowfullscreen>
+      </iframe>
+    </div>
+    <h2>Suggested Movies</h2>
+    <div id="suggestions" class="suggestions">
+
+    </div>
+
+<!--change urls script-->
+<script>
+const params = new URLSearchParams(window.location.search);
+const video = params.get("video");
+const title = params.get("title");
+
+const frame = document.getElementById("movieFrame");
+
+if(video){
+    frame.src = video;
+}else{
+    document.body.innerHTML += "<p>No video URL received</p>";
+}
+
+if(title){
+    document.getElementById("movieTitle").textContent = title;
+}
+
+</script>
+
+
+
+<!--suggestion script-->
+
+
+
+  <div class="images">
+    <div class="background">
+      <a href="watch.html?video=https://geo.dailymotion.com/player.html?video=x8vcsto&title=Kiki 1">
+        <div class="image-wrapper">
+          <img class="background1" src="images/pucci1.jpg">
+          <i class="fa fa-play play-icon"></i>
+        </div>
+        <p>pucci 1</p>
+      </a>
+    </div>
+    <div class="background">
+      <a href="watch.html?video=https://player.vimeo.com/video/76979871&title=Test Video">
+        <div class="image-wrapper">
+          <img class="background1" src="images/pucci2.jpg">
+          <i class="fa fa-play play-icon"></i>
+        </div>
+        <p>pucci 2</p>
+      </a>
+    </div>
+    <div class="background">
+      <a href="watch.html?video=https://player.vimeo.com/video/1171242991?h=5827e17eac&title=Pucci 3">
+        <div class="image-wrapper">
+          <img class="background1" src="images/pucci3.jpg">
+          <i class="fa fa-play play-icon"></i>
+        </div>
+        <p>pucci 3</p>
+      </a>
+    </div>
+    <div class="background">
+      <div class="image-wrapper">
+        <img class="background1" src="images/pucci4.jpg" alt="">
+        <i class="fa fa-play play-icon"></i>
+      </div>
+      <p>pucci 4</p>
+    </div>
+    <div class="background">
+      <div class="image-wrapper">
+        <img class="background1" src="images/limucucu.jpg" alt="">
+        <i class="fa fa-play play-icon"></i>
+      </div>
+      <p>Li Mucucu 1</p>
+    </div>
+  </div>  
+  <div class="footer">
+    <p>Share with your friends to suppot us </p>
+    <a href="index.html"><img src="kabylo2.png" alt=""></a>
+    <div class="counter">
+      <img src="https://visitor-badge.laobi.icu/badge?page_id=kabylo.site">
+    </div>
+  </div>
+</body>
+</html>
