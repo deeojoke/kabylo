@@ -49,7 +49,6 @@ p{
     font-size: 20px;
     font-family: "Audiowide", sans-serif;
 }
-
 .video-container{
     position: relative;
     width: 100%;
@@ -70,12 +69,12 @@ p{
 }
 
 .background{
-    margin-top: 50px;
+    margin-top: 25px;
     width: 250px;
     max-width: 90%;
-    background-color: rgba(44, 44, 44, 0.732);
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 10px;
-    
+    background: linear-gradient(to bottom, rgb(255, 0, 0) 45%, rgba(0,0,0,0));
 }
 .background1{
     width: 100%;
@@ -140,7 +139,8 @@ p{
 }
 .footer a img{
     display: block;
-    width: 20%;
+    width: 90px;
+    max-width: 40%;
     height: 65%;
     margin: auto;
     padding: 20px;
@@ -148,7 +148,87 @@ p{
 }
 
 
-@media (max-width: 768px){
+
+
+
+.button{
+  display:flex;
+  justify-content:center;
+  margin-top:40px;
+}
+
+.glitch-btn{
+  position:relative;
+  padding:15px;
+  font-size:15px;
+  color:#fff;
+  text-decoration:none;
+  border-radius: 5px;
+  letter-spacing:3px;
+  overflow:hidden;
+  transition:1s;
+}
+
+/* glitch layers */
+.glitch-btn::before,
+.glitch-btn::after{
+  content:"SHOW ALL";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#202020;
+  overflow:hidden;
+}
+
+.glitch-btn::before{
+  color:#ff00ff;
+  z-index:-1;
+}
+
+.glitch-btn::after{
+  color:#00ffff;
+  z-index:-2;
+}
+
+/* hover glitch animation */
+.glitch-btn::before{
+  animation:glitch1 1s infinite;
+}
+
+.glitch-btn::after{
+  animation:glitch2 1s infinite;
+}
+
+.glitch-btn:hover{
+  box-shadow:0 0 25px 1px #ff4400;
+}
+
+@keyframes glitch1{
+  0%{transform:translate(2px,-2px);}
+  25%{transform:translate(-2px,2px);}
+  50%{transform:translate(2px,2px);}
+  75%{transform:translate(-2px,-2px);}
+  100%{transform:translate(2px,-2px);}
+}
+
+@keyframes glitch2{
+  0%{transform:translate(-2px,2px);}
+  25%{transform:translate(2px,-2px);}
+  50%{transform:translate(-2px,-2px);}
+  75%{transform:translate(2px,2px);}
+  100%{transform:translate(-2px,2px);}
+}
+
+
+
+
+
+@media (max-width: 420px){
 
 .images{
     gap: 20px;
