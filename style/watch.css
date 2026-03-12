@@ -86,8 +86,8 @@ p{
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 .image-wrapper {
   position: relative;
@@ -238,7 +238,7 @@ a {
 }
 
 .background{
-    width: 80%;
+    width: 150px;
 }
 
 .backgroundimage{
