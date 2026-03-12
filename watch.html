@@ -10,21 +10,23 @@
 </head>
 <body>
     <div class="section">
-        <div class="nav">
-            <a href="index.html"><img src="kabylo1.png" alt=""></a>
-        </div>
+      <div class="nav">
+          <a href="index.html"><img src="kabylo1.png" alt=""></a>
+      </div>
+      <h1 id="movieTitle"></h1>
+
+      <div class="video-container">
+        <iframe
+            id="movieFrame"
+            src=""
+            frameborder="0"
+            allow="autoplay"
+            allowfullscreen>
+        </iframe>
+      </div>
     </div>
 
-    <h1 id="movieTitle"></h1>
-
-    <div class="video-container">
-      <iframe
-          id="movieFrame"
-          src=""
-          frameborder="0"
-          allowfullscreen>
-      </iframe>
-    </div>
+    
     <h2>Suggested Movies</h2>
     <div id="suggestions" class="suggestions">
 
@@ -53,8 +55,6 @@ if(title){
 
 
 <!--suggestion script-->
-
-
 
   <div class="images">
     <div class="background">
@@ -146,7 +146,12 @@ if(title){
         <p>3icuca</p>
       </a>
     </div>
-  </div> 
+  </div>
+  <div class="button">
+    <a href="index.html" class="glitch-btn">SHOW ALL</a>
+  </div>
+
+    
   <div class="footer">
     <p>Share with your friends to suppot us </p>
     <a href="index.html"><img src="kabylo2.png" alt=""></a>
