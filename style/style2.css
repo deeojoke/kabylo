@@ -178,14 +178,18 @@ a {
 
 
 
-@media (max-width: 420px){
+@media (max-width: 900px/*650px*/){
 
 .images{
     gap: 20px;
 }
-
-.background{
+/*.background{
     width: 250px;
+}*/
+.background{
+    width: 60%;
+    max-width: 250px;
+    min-width: 150px;
 }
 .background p{
     margin-top: 5px;
