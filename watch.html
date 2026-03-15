@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 </head>
 <body>
     <div class="section">
@@ -20,13 +21,15 @@
     </div>
 
       <div class="video-container">
-        <iframe
-            id="movieFrame"
-            src=""
-            frameborder="0"
-            allow="autoplay"
-            allowfullscreen>
-        </iframe>
+          <div class="plyr__video-embed" id="player">
+            <iframe
+              id="movieFrame"
+              src=""
+              allowfullscreen
+              allow="autoplay; fullscreen"
+              frameborder="0">
+            </iframe>
+          </div>
       </div>
 
     
@@ -189,5 +192,14 @@ document.querySelector(".section").style.backgroundImage =
       <img src="https://visitor-badge.laobi.icu/badge?page_id=kabylo.site">
     </div>
   </div>
+
+
+
+
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+  <script>
+    const player = new Plyr('#player');
+  </script>
+    
 </body>
 </html>
