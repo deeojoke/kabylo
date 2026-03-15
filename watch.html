@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kabylo Watch</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kabylo Watch</title>
 
-    <link href="style/watch.css" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+<link href="style/watch.css" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 
-    <!-- Plyr CSS -->
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css"/>
+
+<style>
+.video-container{
+width:90%;
+max-width:1000px;
+margin:auto;
+}
+
+video{
+width:100%;
+}
+</style>
+
 </head>
 
+
 <body>
+
 
 <div class="section">
 
@@ -24,7 +39,7 @@
 </div>
 
 <div class="poster-container">
-<img id="moviePoster" src="" alt="">
+<img id="moviePoster" src="">
 </div>
 
 <h1 id="movieTitle"></h1>
@@ -33,21 +48,13 @@
 
 
 
-<!-- VIDEO PLAYER -->
-
 <div class="video-container">
 
-<div class="plyr__video-embed" id="player">
+<video id="player" playsinline controls>
 
-<iframe
-id="movieFrame"
-src=""
-allowfullscreen
-allow="autoplay; fullscreen"
-frameborder="0">
-</iframe>
+<source id="videoSource" src="" type="video/mp4">
 
-</div>
+</video>
 
 </div>
 
@@ -60,67 +67,29 @@ frameborder="0">
 <div class="images">
 
 <div class="background">
-<a href="watch.html?video=https://uqload.is/embed-7fiyh3verof3.html&title=Pucci 1&poster=images/pucci1.jpg">
-<div class="image-wrapper">
-<img class="background1" src="images/pucci1.jpg">
-<i class="fa fa-play play-icon"></i>
-</div>
-<p>pucci 1</p>
-</a>
-</div>
+<a href="watch.html?video=https://drive.google.com/uc?export=download&id=1UXz7v8W50HTCwA_keEFWzN5KPy_qKSOx&title=Pucci 2&poster=images/pucci2.jpg">
 
-
-<div class="background">
-<a href="watch.html?video=https://drive.google.com/file/d/1UXz7v8W50HTCwA_keEFWzN5KPy_qKSOx/preview&title=Pucci 2&poster=images/pucci2.jpg">
 <div class="image-wrapper">
 <img class="background1" src="images/pucci2.jpg">
 <i class="fa fa-play play-icon"></i>
 </div>
+
 <p>pucci 2</p>
+
 </a>
 </div>
 
 
 <div class="background">
-<a href="watch.html?video=https://drive.google.com/file/d/1EBQOgVEyr96mfAv1ln-UFnlrzbfpxDsE/preview&title=Pucci 3&poster=images/pucci3.jpg">
+<a href="watch.html?video=https://drive.google.com/uc?export=download&id=1EBQOgVEyr96mfAv1ln-UFnlrzbfpxDsE&title=Pucci 3&poster=images/pucci3.jpg">
+
 <div class="image-wrapper">
 <img class="background1" src="images/pucci3.jpg">
 <i class="fa fa-play play-icon"></i>
 </div>
+
 <p>pucci 3</p>
-</a>
-</div>
 
-
-<div class="background">
-<a href="watch.html?video=https://drive.google.com/file/d/1zaG1Bzb_mluQ_P64x47L1ENr9HQOE706/preview&title=Li mucucu 1&poster=images/limucucu.jpg">
-<div class="image-wrapper">
-<img class="background1" src="images/limucucu.jpg">
-<i class="fa fa-play play-icon"></i>
-</div>
-<p>Li mucucu 1</p>
-</a>
-</div>
-
-
-<div class="background">
-<a href="watch.html?video=https://drive.google.com/file/d/1n5PMGDaq-3iF4-np-VMz0M7eLMg3XXBp/preview&title=Li mucucu 2&poster=images/limucucu2.jpg">
-<div class="image-wrapper">
-<img class="background1" src="images/limucucu2.jpg">
-<i class="fa fa-play play-icon"></i>
-</div>
-<p>Li mucucu 2</p>
-</a>
-</div>
-
-
-<div class="background">
-<a href="watch.html?video=https://player.vimeo.com/video/1171436522?h=5fe05169dc&title=Amcic Wa3li&poster=images/amcicwa3li.jpg">
-<div class="image-wrapper">
-<img class="background1" src="images/amcicwa3li.jpg">
-<i class="fa fa-play play-icon"></i>
-</div>
-<p>Amcic Wa3li</p>
 </a>
 </div>
 
@@ -139,7 +108,7 @@ frameborder="0">
 
 <p>Share with your friends to suppot us </p>
 
-<a href="index.html"><img src="kabylo2.png" alt=""></a>
+<a href="index.html"><img src="kabylo2.png"></a>
 
 <div class="counter">
 <img src="https://visitor-badge.laobi.icu/badge?page_id=kabylo.site">
@@ -149,49 +118,40 @@ frameborder="0">
 
 
 
-<!-- SCRIPT FOR VIDEO / TITLE / POSTER -->
-
 <script>
 
-const params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search)
 
-const video = params.get("video");
-const title = params.get("title");
-const poster = params.get("poster");
-
-const frame = document.getElementById("movieFrame");
+const video = params.get("video")
+const title = params.get("title")
+const poster = params.get("poster")
 
 if(video){
-frame.src = video;
+document.getElementById("videoSource").src = video
 }
 
 if(title){
-document.getElementById("movieTitle").textContent = title;
+document.getElementById("movieTitle").textContent = title
 }
 
 if(poster){
-document.getElementById("moviePoster").src = poster;
-}
+document.getElementById("moviePoster").src = poster
 
-if(poster){
 document.querySelector(".section").style.backgroundImage =
-`linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.3)), url(${poster})`;
+`linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.3)), url(${poster})`
 }
 
 </script>
 
 
 
-<!-- Plyr JS -->
-
-<script src="https://cdn.plyr.io/3.7.8/plyr.js?v=1"></script>
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 
 <script>
 
-const player = new Plyr('#player');
+const player = new Plyr('#player')
 
 </script>
-
 
 
 </body>
